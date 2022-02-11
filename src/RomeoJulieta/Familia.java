@@ -22,6 +22,15 @@ public class Familia {
         this.linaje = linaje;
         lista_aldeanos = new ArrayList <Aldeano>();
     }
+
+    
+    @Override
+    public String toString() {
+        
+        return "Familia{" + "Apellido: " + linaje + ", Lista Aldeanos=" + lista_aldeanos + '}';
+    }
+    
+    
     
     
     

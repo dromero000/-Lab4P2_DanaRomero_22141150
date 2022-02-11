@@ -38,13 +38,37 @@ public class Main {
                     crearAldeano();
                     break;
                 case 3:
+                    System.out.println("Imprimir Familias");
                     
                     break;
+                case 4:
+                    break;
+                  
                     
             }
         }while(opcion!=0);
     }
     
+    //Función para agregar las familas y aldeanos que estarán al inicio por default
+    public static void agregarFamilias(){
+        //La familia en la posición 0 es Montesco
+        lista_familia.add(new Familia ("Montesco"));
+        lista_familia.get(0).lista_aldeanos.add(new SuperGranjero ("Romeo", "Montesco", 21, 1000));
+        lista_familia.get(0).lista_aldeanos.add(new Herrero ("Carlos", "Montesco", 42, 200));
+        lista_familia.get(0).lista_aldeanos.add(new Agronomo ("Karina", "Montesco", 60, 100 ));
+        
+        //La familia en la posición 1 de Capuleto
+        lista_familia.add(new Familia ("Capuleto"));
+        lista_familia.get(1).lista_aldeanos.add(new Normal ("Julieta", "Capuleto", 20, 1000));
+        lista_familia.get(1).lista_aldeanos.add(new Explosivo ("Sofia", "Capuleto", 30, 150));
+        lista_familia.get(1).lista_aldeanos.add(new Pacifista ("Guillermo", "Capuleto", 33, 200));
+        
+        //La familia en la posición 2 de Romero
+        lista_familia.add(new Familia ("López"));
+        lista_familia.get(2).lista_aldeanos.add(new Herrero ("Pablo", "López", 57, 300));
+        lista_familia.get(2).lista_aldeanos.add(new Agronomo("Manuel", "López", 36, 200));
+        lista_familia.get(2).lista_aldeanos.add(new Pacifista ("María", "López", 27, 150 ));
+    }
     public static boolean crearFamilia(){
         System.out.print("Ingrese apellido: ");
         String apellido = leer.nextLine();
