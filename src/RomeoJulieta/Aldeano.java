@@ -9,7 +9,7 @@ package RomeoJulieta;
  *
  * @author Dana Romero
  */
-public class Aldeano {
+public abstract class Aldeano {
     
     protected String nombre;
     protected String apellido;

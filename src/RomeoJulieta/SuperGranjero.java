@@ -18,7 +18,7 @@ public class SuperGranjero extends Aldeano{
     
     @Override
     public String toString(){
-        return super.toString() + ", Puntos Ataque=" + 1000;
+        return super.toString() + ", Puntos Ataque=" + 1000+ "Tipo= Super Granjer }\n";
     }
     
 }

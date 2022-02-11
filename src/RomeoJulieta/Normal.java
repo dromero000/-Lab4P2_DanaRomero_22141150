@@ -18,7 +18,7 @@ public class Normal extends Aldeano{
     
     @Override
     public String toString(){
-        return super.toString() + ", Puntos Ataque=" + 50;
+        return super.toString() + ", Puntos Ataque= " + 50+ "Tipo= Normal }\n";
     }
     
     

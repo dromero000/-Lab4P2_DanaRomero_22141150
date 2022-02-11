@@ -26,7 +26,6 @@ public class Familia {
     
     @Override
     public String toString() {
-        
         return "Familia{" + "Apellido: " + linaje + ", Lista Aldeanos=" + lista_aldeanos + '}';
     }
     

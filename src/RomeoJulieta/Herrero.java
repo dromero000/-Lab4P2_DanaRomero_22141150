@@ -21,7 +21,7 @@ public class Herrero extends Aldeano{
     }
     @Override
     public String toString(){
-        return super.toString() + ", Puntos Ataque=" + 0;
+        return super.toString() + ", Puntos Ataque=" + 0+ "Tipo= Herrero }\n";
     }
     
 }

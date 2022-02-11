@@ -18,7 +18,7 @@ public class Explosivo extends Aldeano{
     
     @Override
     public String toString(){
-        return super.toString() + ", Puntos Ataque=" + 250;
+        return super.toString() + ", Puntos Ataque=" + 250+ "Tipo= Explosivo }\n";
     }
     
     

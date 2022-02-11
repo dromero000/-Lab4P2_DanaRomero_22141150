@@ -17,12 +17,12 @@ public class Main {
     static ArrayList <Familia> lista_familia = new ArrayList<Familia>();
         
     public static void main(String[] args) {
-        
+        agregarFamilias();       
         
         int opcion;
         do{
             System.out.println("* * * R O M E O  Y  J U L I E T A * * *");
-            System.out.println("Menú\n0 - Salir\n1 - Crear Familia\n2 - Crear Aldeano\n2");
+            System.out.println("Menú\n0 - Salir\n1 - Crear Familia\n2 - Crear Aldeano\n3 - Imprimir Familias\n4 - Pelear\n");
             System.out.print("Ingrese opción: ");
             opcion = leer.nextInt();
             switch (opcion){
@@ -30,16 +30,18 @@ public class Main {
                     System.out.println("¡Gracias!\n-Dana Romero");
                     break;
                 case 1:
-                    System.out.println("Crear Familia");
+                    System.out.println("---Crear Familia---");
                     crearFamilia();
                     break;
                 case 2:
-                    System.out.println("Crear Aldeano");
+                    System.out.println("---Crear Aldeano---");
                     crearAldeano();
                     break;
                 case 3:
-                    System.out.println("Imprimir Familias");
-                    
+                    System.out.println("---Imprimir Familias---");
+                    for (Familia fam : lista_familia){
+                        System.out.println(fam.toString());
+                    }
                     break;
                 case 4:
                     break;
@@ -69,6 +71,7 @@ public class Main {
         lista_familia.get(2).lista_aldeanos.add(new Agronomo("Manuel", "López", 36, 200));
         lista_familia.get(2).lista_aldeanos.add(new Pacifista ("María", "López", 27, 150 ));
     }
+    
     public static boolean crearFamilia(){
         System.out.print("Ingrese apellido: ");
         String apellido = leer.nextLine();
