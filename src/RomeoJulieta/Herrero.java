@@ -24,4 +24,12 @@ public class Herrero extends Aldeano{
         return super.toString() + ", Puntos Ataque=" + 0+ "Tipo= Herrero }\n";
     }
     
+    public int ataque(Aldeano a){
+        if (a instanceof Agronomo){
+            return (int)Math.round(puntosAtaque*1.1);
+        }else if (a instanceof Pacifista){
+            return (int)Math.round(puntosAtaque*1.05);
+        }
+        return puntosAtaque;
+    }
 }

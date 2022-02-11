@@ -22,4 +22,8 @@ public class Pacifista extends Aldeano{
     public String toString(){
         return super.toString() + ", Puntos Ataque=" + 0+ "Tipo= Pacifista }\n";
     }
+    
+    public int ataque(Aldeano a){
+        return 0;
+    }
 }

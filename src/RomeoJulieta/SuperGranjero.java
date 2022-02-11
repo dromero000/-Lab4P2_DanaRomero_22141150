@@ -21,4 +21,12 @@ public class SuperGranjero extends Aldeano{
         return super.toString() + ", Puntos Ataque=" + 1000+ "Tipo= Super Granjer }\n";
     }
     
+    public int ataque(Aldeano a){
+        if (a instanceof Herrero){
+            return (int)Math.round(puntosAtaque*1.1);
+        }else if (a instanceof Explosivo){
+            return (int)Math.round(puntosAtaque*1.15);
+        }
+        return puntosAtaque;
+    }
 }

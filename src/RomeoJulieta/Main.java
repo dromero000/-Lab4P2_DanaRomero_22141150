@@ -148,6 +148,7 @@ public class Main {
                 int i = 0;
                 Aldeano jugador1 = contrincante.lista_aldeanos.get(i);
                 Aldeano jugador2 = montesco.lista_aldeanos.get(i);
+                
             }
             
         }

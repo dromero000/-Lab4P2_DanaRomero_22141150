@@ -21,7 +21,12 @@ public class Normal extends Aldeano{
         return super.toString() + ", Puntos Ataque= " + 50+ "Tipo= Normal }\n";
     }
     
-    
+    public int ataque(Aldeano a){
+        if (a instanceof Pacifista){
+            return (int)Math.round(puntosAtaque*1.05);
+        }
+        return puntosAtaque;
+    }
     
     
     

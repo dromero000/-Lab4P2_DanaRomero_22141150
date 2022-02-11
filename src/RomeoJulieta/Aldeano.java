@@ -29,6 +29,8 @@ public abstract class Aldeano {
         return "Aldeano{" + "Nombre=" + nombre + ", Apellido=" + apellido + ", Edad=" + edad + ", Puntos Vida=" + puntosVida;
     }
     
+    public abstract int ataque(Aldeano a);
+    
     
     
     
