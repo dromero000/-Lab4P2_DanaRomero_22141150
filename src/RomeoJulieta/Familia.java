@@ -15,7 +15,13 @@ public class Familia {
     
     //Atributos
     String linaje;
-    ArrayList <Aldeano> lista_aldeanos = new ArrayList <Aldeano>();
+    ArrayList <Aldeano> lista_aldeanos;
+    
+    //Constructor
+    public Familia (String linaje){
+        this.linaje = linaje;
+        lista_aldeanos = new ArrayList <Aldeano>();
+    }
     
     
     

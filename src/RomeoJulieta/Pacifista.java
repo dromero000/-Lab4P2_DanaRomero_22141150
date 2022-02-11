@@ -17,4 +17,9 @@ public class Pacifista extends Aldeano{
         puntosAtaque= 0;
         discursoPaz = "¡Pelear no es la solución, mejor trabajemos juntos por un futuro mejor!";
     }
+    
+    @Override
+    public String toString(){
+        return super.toString() + ", Puntos Ataque=" + 0;
+    }
 }

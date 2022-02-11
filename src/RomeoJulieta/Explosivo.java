@@ -16,4 +16,10 @@ public class Explosivo extends Aldeano{
         puntosAtaque= 250;
     }
     
+    @Override
+    public String toString(){
+        return super.toString() + ", Puntos Ataque=" + 250;
+    }
+    
+    
 }

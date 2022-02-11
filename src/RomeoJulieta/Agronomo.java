@@ -16,4 +16,8 @@ public class Agronomo extends Aldeano{
         puntosAtaque= 100;
     }
     
+    @Override
+    public String toString(){
+        return super.toString() + ", Puntos Ataque=" + 100;
+    }
 }

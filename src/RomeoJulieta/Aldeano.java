@@ -9,7 +9,7 @@ package RomeoJulieta;
  *
  * @author Dana Romero
  */
-public abstract class Aldeano {
+public class Aldeano {
     
     protected String nombre;
     protected String apellido;
@@ -23,6 +23,13 @@ public abstract class Aldeano {
         this.edad = edad;
         this.puntosVida = puntosVida;
     }
+
+    @Override
+    public String toString() {
+        return "Aldeano{" + "Nombre=" + nombre + ", Apellido=" + apellido + ", Edad=" + edad + ", Puntos Vida=" + puntosVida;
+    }
+    
+    
     
     
     
