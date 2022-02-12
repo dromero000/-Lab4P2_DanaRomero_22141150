@@ -173,14 +173,10 @@ public class Main {
                 if (jContrincante.puntosVida <=0){
                     System.out.println(jMontesco.nombre+" ha derrotado a "+jContrincante.nombre);
                     contrincante.lista_aldeanos.remove((contrincante.lista_aldeanos.indexOf(jContrincante)));
-                    //jMontesco.puntosVida = vidaM;
-                    //c=c+1;
                     
                 }else if (jMontesco.puntosVida <=0){
                     System.out.println(jContrincante.nombre+ " ha derrotado a "+ jMontesco.nombre);
                     montesco.lista_aldeanos.remove((montesco.lista_aldeanos.indexOf(jMontesco)));
-                    //jContrincante.puntosVida=vidaC;
-                    //m=m+1;
                 }
                 
            }
@@ -196,6 +192,7 @@ public class Main {
             
         
     }
+    
     
 
      
