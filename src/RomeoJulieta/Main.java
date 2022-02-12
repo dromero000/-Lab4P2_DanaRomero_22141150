@@ -148,34 +148,45 @@ public class Main {
             Collections.shuffle(contrincante.lista_aldeanos);
             Collections.shuffle(montesco.lista_aldeanos);
             int c=0,m = 0;
+            int vidaC;
+            int vidaM;
             while(contrincante.lista_aldeanos.size()>0 && montesco.lista_aldeanos.size()>0){
                 Aldeano jContrincante = contrincante.lista_aldeanos.get(c);
                 Aldeano jMontesco = montesco.lista_aldeanos.get(m);
-                
-                while (jContrincante.puntosVida>0 && jMontesco.puntosVida>0){
+                vidaC = jContrincante.puntosVida;
+                vidaM = jMontesco.puntosVida;
+                //while (jContrincante.puntosVida>0 && jMontesco.puntosVida>0){
                     int ataque = jMontesco.ataque(jContrincante);
                     if(ataque !=0){
                         jContrincante.puntosVida-=ataque;
                         System.out.println(jMontesco.nombre+ " ha atacado a "+ jContrincante.nombre+" haciéndole "
                                 + ataque + " de daño. "+jContrincante.nombre +" tiene "+ jContrincante.puntosVida+" de vida.");
+                        /*if (jContrincante.puntosVida>=0){
+                            break;
+                        }*/
                     }
-
+                    
                     ataque = jContrincante.ataque(jMontesco);
                     if(ataque !=0){
                         jMontesco.puntosVida-=ataque;
                         System.out.println(jContrincante.nombre+ " ha atacado a "+ jMontesco.nombre+" haciéndole "
                                 + ataque + " de daño. "+jMontesco.nombre +" tiene "+ jMontesco.puntosVida+" de vida.");
+                        /*if (jMontesco.puntosVida>=0){
+                            break;
+                        }*/
                     }
-                }
+                //}
                 if (jContrincante.puntosVida <=0){
                     System.out.println(jMontesco.nombre+" ha derrotado a "+jContrincante.nombre);
                     contrincante.lista_aldeanos.remove((contrincante.lista_aldeanos.indexOf(jContrincante)));
-                    c++;
+                    //jMontesco.puntosVida = vidaM;
+                    //c=c+1;
                     
                 }else if (jMontesco.puntosVida <=0){
                     System.out.println(jContrincante.nombre+ " ha derrotado a "+ jMontesco.nombre);
                     montesco.lista_aldeanos.remove((montesco.lista_aldeanos.indexOf(jMontesco)));
-                    m++;
+                    //jContrincante.puntosVida=vidaC;
+                    //m=m+1;
                 }
                 
            }
