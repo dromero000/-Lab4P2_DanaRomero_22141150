@@ -155,27 +155,21 @@ public class Main {
                 Aldeano jMontesco = montesco.lista_aldeanos.get(m);
                 vidaC = jContrincante.puntosVida;
                 vidaM = jMontesco.puntosVida;
-                //while (jContrincante.puntosVida>0 && jMontesco.puntosVida>0){
                     int ataque = jMontesco.ataque(jContrincante);
                     if(ataque !=0){
                         jContrincante.puntosVida-=ataque;
                         System.out.println(jMontesco.nombre+ " ha atacado a "+ jContrincante.nombre+" haciéndole "
                                 + ataque + " de daño. "+jContrincante.nombre +" tiene "+ jContrincante.puntosVida+" de vida.");
-                        /*if (jContrincante.puntosVida>=0){
-                            break;
-                        }*/
                     }
-                    
-                    ataque = jContrincante.ataque(jMontesco);
-                    if(ataque !=0){
-                        jMontesco.puntosVida-=ataque;
-                        System.out.println(jContrincante.nombre+ " ha atacado a "+ jMontesco.nombre+" haciéndole "
-                                + ataque + " de daño. "+jMontesco.nombre +" tiene "+ jMontesco.puntosVida+" de vida.");
-                        /*if (jMontesco.puntosVida>=0){
-                            break;
-                        }*/
+                    if(jContrincante.puntosVida>=0){
+                        ataque = jContrincante.ataque(jMontesco);
+                        if(ataque !=0){
+                            jMontesco.puntosVida-=ataque;
+                            System.out.println(jContrincante.nombre+ " ha atacado a "+ jMontesco.nombre+" haciéndole "
+                                    + ataque + " de daño. "+jMontesco.nombre +" tiene "+ jMontesco.puntosVida+" de vida.");
+                            
+                        }
                     }
-                //}
                 if (jContrincante.puntosVida <=0){
                     System.out.println(jMontesco.nombre+" ha derrotado a "+jContrincante.nombre);
                     contrincante.lista_aldeanos.remove((contrincante.lista_aldeanos.indexOf(jContrincante)));
@@ -190,6 +184,13 @@ public class Main {
                 }
                 
            }
+            if(contrincante.lista_aldeanos.isEmpty()){
+                System.out.println(montesco.linaje.toUpperCase()+" GANARON");
+                lista_familia.remove((lista_familia.indexOf(contrincante)));
+            }else if (montesco.lista_aldeanos.isEmpty()){
+                System.out.println(contrincante.linaje.toUpperCase()+" GANARON");
+                lista_familia.remove((lista_familia.indexOf(montesco)));
+            }
             
         }
             
