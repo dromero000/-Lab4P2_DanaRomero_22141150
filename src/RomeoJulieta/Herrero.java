@@ -25,11 +25,15 @@ public class Herrero extends Aldeano{
     }
     
     public int ataque(Aldeano a){
-        if (a instanceof Agronomo){
-            return (int)Math.round(puntosAtaque*1.1);
-        }else if (a instanceof Pacifista){
-            return (int)Math.round(puntosAtaque*1.05);
+        if(!fallar(10)){
+            if (a instanceof Agronomo){
+                return (int)Math.round(puntosAtaque*1.1);
+            }else if (a instanceof Pacifista){
+                return (int)Math.round(puntosAtaque*1.05);
+            }
+            return puntosAtaque;
         }
-        return puntosAtaque;
+        return 0;
     }
+    
 }

@@ -21,12 +21,16 @@ public class Agronomo extends Aldeano{
         return super.toString() + ", Puntos Ataque=" + 100+ "Tipo= Agrónomo }\n";
     }
     
+    @Override
     public int ataque(Aldeano a){
-        if (a instanceof Pacifista){
-            return (int)Math.round(puntosAtaque*1.05);
-        }else if (a instanceof Normal){
-            return (int)Math.round(puntosAtaque*1.1);
-        }
-        return puntosAtaque;
+        if(fallar(5)==false){
+            if (a instanceof Pacifista){
+                return (int)Math.round(puntosAtaque*1.05);
+            }else if (a instanceof Normal){
+                return (int)Math.round(puntosAtaque*1.1);
+            }
+            return puntosAtaque;
+    }
+        return 0;
     }
 }

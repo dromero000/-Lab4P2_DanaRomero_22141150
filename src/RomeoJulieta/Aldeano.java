@@ -5,11 +5,14 @@
  */
 package RomeoJulieta;
 
+import java.util.Random;
+
 /**
  *
  * @author Dana Romero
  */
 public abstract class Aldeano {
+    static Random r = new Random();
     
     protected String nombre;
     protected String apellido;
@@ -30,6 +33,16 @@ public abstract class Aldeano {
     }
     
     public abstract int ataque(Aldeano a);
+    
+    public boolean fallar(int porcentaje){
+        int num = r.nextInt(100);
+        if (num<=porcentaje){
+            return true;
+        }
+        return false;
+    }
+        
+    
     
     
     

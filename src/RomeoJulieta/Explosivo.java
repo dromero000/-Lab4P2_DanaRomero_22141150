@@ -22,12 +22,15 @@ public class Explosivo extends Aldeano{
     }
     
     public int ataque(Aldeano a){
-        if (a instanceof Herrero){
-            return (int)Math.round(puntosAtaque*1.05);
-        }else if (a instanceof Agronomo){
-            return (int)Math.round(puntosAtaque*1.1);
+        if (!fallar(15)){
+            if (a instanceof Herrero){
+                return (int)Math.round(puntosAtaque*1.05);
+            }else if (a instanceof Agronomo){
+                return (int)Math.round(puntosAtaque*1.1);
+            }
+            return puntosAtaque;
         }
-        return puntosAtaque;
-    }
+        return 0;
     
+    }
 }
